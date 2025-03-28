@@ -45,7 +45,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
 
     setQuery(value);
     setShowDropdown(true);
-    onSelected(null); // ⬅️ Скидання вибраної людини при зміні введення
+    onSelected(null);
   };
 
   const handleSelect = (person: Person) => {
@@ -66,7 +66,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
         className: 'input',
         'data-cy': 'search-input',
         value: query,
-        onChange: handleInputChange, // ⬅️ Виправлено виклик функції зміни введення
+        onChange: handleInputChange,
         onFocus: () => setShowDropdown(true),
         onBlur: () => setTimeout(() => setShowDropdown(false), 200),
       }),
